@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-head: "Poppins", sans-serif;
+
+  --color-bg: #0C0C0B;
+  --color-bg2: #111110;
+  --color-surface: #161614;
+  --color-surface2: #1D1D1A;
+  --color-surface3: #252521;
+  --color-surface4: #2E2E2A;
+
+  --color-t1: #F2F0E8;
+  --color-t2: #A09C90;
+  --color-t3: #5C5852;
+  --color-t4: #3A3835;
+
+  --color-brand-orange: #E8620A;
+  --color-brand-orange-lt: #F97316;
+  
+  --color-semantic-green: #3ECF6A;
+  --color-semantic-red: #F06060;
+  --color-semantic-amber: #F5A623;
+  --color-semantic-blue: #5B9CF6;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-t1 font-sans antialiased;
+  }
+}
+
+@media print {
+  aside, header, .no-print {
+    display: none !important;
+  }
+  main {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+  .flex-1 {
+    overflow: visible !important;
+  }
+  .bg-bg2 {
+    background-color: white !important;
+    color: black !important;
+  }
+  .bg-surface, .bg-surface2 {
+    background-color: #f9f9f9 !important;
+    border: 1px solid #ddd !important;
+    color: black !important;
+  }
+  .text-t1, .text-t2, .text-t3 {
+    color: black !important;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
